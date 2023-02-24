@@ -1,0 +1,13 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+.container{
+    margin: 40px auto;
+    width: 10rem;
+    height: 10rem;
+    border: 2px solid red;
+}
