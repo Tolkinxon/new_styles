@@ -31,9 +31,9 @@
 }
 
 .container span::after {
-  background-color: white;
-  width: 20px;
-  height: 20px;
-  display: inline-block;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  width: 10px;
+  height: 15px;
   content: '';
 }
