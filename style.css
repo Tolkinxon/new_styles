@@ -21,10 +21,19 @@
   right: 10px;
 }
 
-.container::before {
-  border: 2px solid black;
-  width: 10px;
-  height: 10px;
+.container span {
+  background-color: grey;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container span::after {
+  background-color: white;
+  width: 20px;
+  height: 20px;
   display: inline-block;
   content: '';
 }
