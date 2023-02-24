@@ -21,8 +21,10 @@
   right: 10px;
 }
 
-.container::after{
-    border: 2px solid black;
-    width: 10px;
-    height: 10px;
+.container::before {
+  border: 2px solid black;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  content: '';
 }
