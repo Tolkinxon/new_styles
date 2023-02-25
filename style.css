@@ -4,14 +4,27 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: grey;
+}
+
+h1 {
+  color: black;
+  font-weight: 700;
+  font-size: 80px;
+}
+
 .box {
   width: 200px;
   height: 200px;
-  background-color: black;
+
   transition: all 1s;
   margin: 200px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .box:hover {
-  transform: rotate(10deg);
+  transform: rotateX(20deg);
 }
