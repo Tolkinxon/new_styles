@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: grey;
-}
-
 h1 {
   color: black;
   font-weight: 700;
@@ -17,7 +13,7 @@ h1 {
 .box {
   width: 200px;
   height: 200px;
-
+  background-color: skyblue;
   transition: all 1s;
   margin: 200px auto;
   display: flex;
@@ -26,5 +22,5 @@ h1 {
 }
 
 .box:hover {
-  transform: rotateX(20deg);
+  transform: rotateZ(50deg);
 }
