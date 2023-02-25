@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  perspective: 500px;
+}
+
 h1 {
   color: black;
   font-weight: 700;
@@ -22,5 +26,5 @@ h1 {
 }
 
 .box:hover {
-  transform: rotateZ(50deg);
+  transform: rotateY(90deg);
 }
