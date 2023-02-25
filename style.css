@@ -8,10 +8,9 @@
   width: 200px;
   height: 200px;
   background-color: black;
-  /* transform: translate(200px 0px); */
-  transition: 2s;
 }
 
 .box:hover {
-  margin-top: 300px;
+  transform: translate(200px, 0);
+  transition: 2s;
 }
