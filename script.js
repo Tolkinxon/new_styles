@@ -4,14 +4,25 @@ const bottom1 = document.querySelector('.bottom')
 const left1 = document.querySelector('.left')
 const right1 = document.querySelector('.right')
 
-let i = 0
+let t = 0
+let b = 0
+let r = 0
+let l = 0
 
 button.addEventListener('click', () => {
-  //   top1.style.cssText = `
-  //       transform:rotateX(80deg) translateZ(100px) rotateZ(${i += 10}deg);
-  //     `
+  top1.style.cssText = `
+        transform:rotateX(90deg) translateZ(100px) rotateZ(${(t += 10)}deg);
+      `
+  bottom1.style.cssText = `
+      transform:rotateX(90deg) translateZ(-100px) rotateZ(${(b += 10)}deg);
+    `
 
   right1.style.cssText = `
-        transform: rotateY(80deg) translateZ(100px) rotate3d(1, 1, 4, ${(i += 40)}deg)  ;
-        `
+            transform-origin: center top -100px;
+          transform:translateZ(100px) rotateY(${(r -= 10)}deg)  ;
+          `
+  left1.style.cssText = `
+          transform-origin: center top 100px;
+          transform: translateZ(-100px) rotateY(${(l -= 10)}deg)  ;
+          `
 })
