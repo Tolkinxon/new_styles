@@ -4,20 +4,17 @@
   box-sizing: border-box;
 }
 
-body {
-  perspective: 600px;
-}
-
 h1 {
   color: black;
   font-weight: 700;
-  font-size: 80px;
+  font-size: 40px;
 }
 
 .container {
   width: 200px;
   height: 200px;
   margin: 200px auto;
+  perspective: 600px;
 }
 
 .box {
@@ -27,13 +24,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* position: absolute; */
-
-  margin: 200px auto;
-}
-
-.box:hover {
-  transform: rotateY(90deg) translateZ(100px);
+  position: absolute;
 }
 
 .top {
@@ -47,8 +38,26 @@ h1 {
 .left {
   transform: rotateY(90deg) translateZ(-100px);
 }
-.left {
+.right {
   transform: rotateY(90deg) translateZ(100px);
 }
 
-.front
+.front {
+  transform: translateZ(100px);
+}
+.behind {
+  transform: translateZ(-100px);
+}
+
+.btn {
+  background-color: brown;
+  border: none;
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  color: white;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 10px;
+}
