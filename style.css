@@ -24,7 +24,9 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  /* position: absolute; */
+
+  margin: 200px auto;
 }
 
 .top {
@@ -39,7 +41,7 @@ h1 {
   transform: rotateY(90deg) translateZ(-100px);
 }
 .right {
-  transform: rotateY(90deg) translateZ(100px);
+  transform: rotateY(80deg) translateZ(100px);
 }
 
 .front {
