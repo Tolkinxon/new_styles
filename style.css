@@ -17,7 +17,7 @@ h1 {
 .container {
   width: 200px;
   height: 200px;
-  border: 2px solid red;
+  margin: 200px auto;
 }
 
 .box {
@@ -27,6 +27,7 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0px auto;
-  float: left;
+  position: absolute;
 }
+
+
