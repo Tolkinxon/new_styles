@@ -8,9 +8,10 @@
   width: 200px;
   height: 200px;
   background-color: black;
+  transition: all 1s;
+  margin: 200px auto;
 }
 
 .box:hover {
-  transform: translate(200px, 0);
-  transition: 2s;
+  transform: rotate(10deg);
 }
