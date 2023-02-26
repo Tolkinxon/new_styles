@@ -28,7 +28,7 @@ h1 {
 }
 
 .top {
-  transform: rotateX(90deg) translateY(100px);
+  transform: rotateX(80deg) translateY(100px);
 }
 
 .bottom {
