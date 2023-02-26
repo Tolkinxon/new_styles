@@ -5,58 +5,42 @@ const right1 = document.querySelector('.right')
 const front1 = document.querySelector('.front')
 const behind1 = document.querySelector('.behind')
 const container = document.querySelector('.container')
+const box = document.querySelector('.box')
 
 let i = 90
 let j = 0
 
-
-const rotateX = (number) => {
+const rotateXY = (number, x, y) => {
   top1.style.cssText = `
-    transform:  rotateX(${(i += number)}deg)   translateZ(100px); `
+    transform:  rotate3d(${x}, ${y}, 0, ${(i += number)}deg) translateZ(100px); `
   bottom1.style.cssText = `
-  transform:  rotateX(${i + 180}deg)   translateZ(100px);`
+    transform:  rotate3d(${x}, ${y}, 0, ${i + 180}deg)   translateZ(100px);`
   right1.style.cssText = `
-    transform: rotateY(90deg) rotate(${i}deg)   translateZ(100px);`
+    transform: rotate3d(${x}, ${y}, 0, ${i}deg)  translateZ(100px);`
   left1.style.cssText = `
-    transform: rotateY(270deg) rotate(${-i}deg)   translateZ(100px);`
+    transform: rotate3d(${x}, ${y}, 0, ${i}deg) translateZ(100px);`
   front1.style.cssText = `
-    transform:  rotateX(${i + 90}deg)   translateZ(100px);`
+    transform:  rotate3d(${x}, ${y}, 0, ${i + 90}deg)   translateZ(100px);`
   behind1.style.cssText = `
-    transform:  rotateX(${i + 270}deg)   translateZ(100px); `
-
-}
-
-const rotateY = (number) => {
-  top1.style.cssText = `
-    transform:  rotate3d(0, 1, 0, ${(i += number)}deg) translateZ(100px); `
-  bottom1.style.cssText = `
-    transform:  rotate3d(0, 1, 0, ${i + 180}deg)   translateZ(100px);`
-  right1.style.cssText = `
-    transform: rotate3d(0, 1, 0, ${i}deg)  translateZ(100px);`
-  left1.style.cssText = `
-    transform: rotate3d(0, 1, 0, ${i}deg)  translateZ(100px);`
-  front1.style.cssText = `
-    transform:  rotate3d(0, 1, 0, ${i + 90}deg)   translateZ(100px);`
-  behind1.style.cssText = `
-    transform:  rotate3d(0, 1, 0, ${i + 270}deg)   translateZ(100px); `
+    transform:  rotate3d(${x}, ${y}, 0, ${i + 270}deg)   translateZ(100px); `
 }
 
 document.addEventListener('keydown', (e) => {
   console.log(e.code)
 
   if (e.code === 'ArrowUp') {
-    rotateX(10) 
+    rotateXY(10, 1, 0)
   }
 
   if (e.code === 'ArrowDown') {
-    rotateX(-10) 
+    rotateXY(-10, 1, 0)
   }
 
   if (e.code === 'ArrowRight') {
-    rotateY(10) 
+    rotateXY(10, 0, 1)
   }
 
   if (e.code === 'ArrowLeft') {
-    rotateY(-10) 
+    rotateXY(-10, 0, 1)
   }
 })
