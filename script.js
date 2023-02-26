@@ -6,42 +6,38 @@ const front1 = document.querySelector('.front')
 const behind1 = document.querySelector('.behind')
 const container = document.querySelector('.container')
 
-let i = 0
+let i = 90
+let j = 0
 
 document.addEventListener('keydown', (e) => {
   console.log(e.code)
 
-  // if (e.code === 'ArrowUp') {
-  //   top1.style.cssText = `
-  //           transform: rotateX(90deg) rotateX(${(i += 10)}deg)   translateZ(100px);
-  //          `
-  //   bottom1.style.cssText = `
-  //          transform: rotateX(90deg) rotateX(${((i += 10) + 180)}deg)   translateZ(100px);
-  //     `
-  // }
-  // if (e.code === 'ArrowDown') {
-  //   top1.style.cssText = `
-  //               transform: rotateX(90deg) rotateX(${(i -= 10)}deg)   translateZ(100px);
-  //          `
-  //   bottom1.style.cssText = `
-  //          transform: rotateX(90deg) rotateX(${((i -= 10) + 180)}deg)   translateZ(100px);
-  //     `
-  // }
-
   if (e.code === 'ArrowUp') {
     top1.style.cssText = `
-            transform:  rotateX(${(i += 10)}deg)   translateZ(100px);  
+            transform:  rotateX(${(i += 1)}deg)   translateZ(100px);  
            `
     bottom1.style.cssText = `
-           transform:  rotateX(${(i += 10) + 180}deg)   translateZ(100px);  
+           transform:  rotateX(${(i += 1) + 180}deg)   translateZ(100px);  
           `
+    right1.style.cssText = `
+            transform: rotateY(90deg) rotate(${(i += 1)}deg)   translateZ(100px);
+           `
+    left1.style.cssText = `
+           transform: rotateY(270deg) rotate(${(j -= 3)}deg)   translateZ(100px);
+      `
   }
   if (e.code === 'ArrowDown') {
     top1.style.cssText = `
-                transform: rotateX(${(i -= 10)}deg)   translateZ(100px);  
+                transform: rotateX(${(i -= 1)}deg)   translateZ(100px);  
            `
     bottom1.style.cssText = `
-           transform:  rotateX(${(i -= 10) + 180}deg)   translateZ(100px);  
+           transform:  rotateX(${(i -= 1) + 180}deg)   translateZ(100px);  
           `
+    right1.style.cssText = `
+          transform: rotateY(90deg) rotate(${(i -= 1)}deg)   translateZ(100px);
+         `
+    left1.style.cssText = `
+         transform: rotateY(270deg) rotate(${(j += 3)}deg)   translateZ(100px);
+    `
   }
 })
