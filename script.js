@@ -14,30 +14,31 @@ document.addEventListener('keydown', (e) => {
 
   if (e.code === 'ArrowUp') {
     top1.style.cssText = `
-            transform:  rotateX(${(i += 1)}deg)   translateZ(100px);  
-           `
+          transform:  rotateX(${(i += 10)}deg)   translateZ(100px); `
     bottom1.style.cssText = `
-           transform:  rotateX(${(i += 1) + 180}deg)   translateZ(100px);  
-          `
+          transform:  rotateX(${i + 180}deg)   translateZ(100px);`
     right1.style.cssText = `
-            transform: rotateY(90deg) rotate(${(i += 1)}deg)   translateZ(100px);
-           `
+          transform: rotateY(90deg) rotate(${i}deg)   translateZ(100px);`
     left1.style.cssText = `
-           transform: rotateY(270deg) rotate(${(j -= 3)}deg)   translateZ(100px);
-      `
+          transform: rotateY(270deg) rotate(${-i}deg)   translateZ(100px);`
+    front1.style.cssText = `
+          transform:  rotateX(${i + 90}deg)   translateZ(100px);`
+    behind1.style.cssText = `
+          transform:  rotateX(${i + 270}deg)   translateZ(100px); `
   }
+
   if (e.code === 'ArrowDown') {
     top1.style.cssText = `
-                transform: rotateX(${(i -= 1)}deg)   translateZ(100px);  
-           `
+          transform:  rotateX(${(i -= 10)}deg)   translateZ(100px); `
     bottom1.style.cssText = `
-           transform:  rotateX(${(i -= 1) + 180}deg)   translateZ(100px);  
-          `
+          transform:  rotateX(${i + 180}deg)   translateZ(100px);`
     right1.style.cssText = `
-          transform: rotateY(90deg) rotate(${(i -= 1)}deg)   translateZ(100px);
-         `
+          transform: rotateY(90deg) rotate(${i}deg)   translateZ(100px);`
     left1.style.cssText = `
-         transform: rotateY(270deg) rotate(${(j += 3)}deg)   translateZ(100px);
-    `
+          transform: rotateY(270deg) rotate(${-i}deg)   translateZ(100px);`
+    front1.style.cssText = `
+          transform:  rotateX(${i + 90}deg)   translateZ(100px);`
+    behind1.style.cssText = `
+          transform:  rotateX(${i + 270}deg)   translateZ(100px); `
   }
 })
