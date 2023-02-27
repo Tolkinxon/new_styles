@@ -11,18 +11,17 @@
   perspective: 700px;
 }
 
-
-
 .box {
-  width: 100%;
-  height: 100%;
-  background-color: skyblue;
+  width: inherit;
+  height: inherit;
   position: absolute;
   text-align: center;
   color: black;
   font-weight: 700;
   font-size: 40px;
   line-height: 10rem;
+  backface-visibility: hidden;
+  background-color: skyblue;
 }
 
 .top {
